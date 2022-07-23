@@ -22,7 +22,7 @@ env:
 
   # Raw character weights are not public.
   # Skip uploading to GitHub Release on public repo.
-  SKIP_UPLOADING_RELEASE_ASSET: ${{ secrets.SKIP_UPLOADING_RELEASE_ASSET || '1' }}
+  SKIP_UPLOADING_RELEASE_ASSET: ${{ '0' }}
 jobs:
   build_and_deploy:
     environment: ${{ github.event.inputs.code_signing == 'true' && 'code_signing' }} # コード署名用のenvironment（false時の挙動は2022年7月10日時点で未定義動作）
